@@ -20,3 +20,9 @@ jobs:
       - name: Guess Dependency Declaration Version
         run: |
           echo ${{github.ref_name}}
+          
+          ls -a
+          ll
+          
+          cd .github
+          ll
