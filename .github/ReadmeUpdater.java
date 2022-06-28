@@ -16,7 +16,7 @@ public class ReadmeUpdater {
 
         String new_content = new String(Files.readAllBytes(README_PATH))
                 .replaceAll(MAVEN_VERSION, String.format("<version>%s</version>", releaseVersion))
-                .replaceAll(GRADLE_VERSION, String.format("implementation 'com\\.featureprobe:server-sdk-java:%s", releaseVersion));
+                .replaceAll(GRADLE_VERSION, String.format("implementation 'com\\.featureprobe:server-sdk-java:%s'", releaseVersion));
 
         try (FileWriter writer = new FileWriter(README_PATH.toString(), false)) {
             writer.write(new_content);
