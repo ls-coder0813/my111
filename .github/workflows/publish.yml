@@ -19,10 +19,6 @@ jobs:
           server-password: MAVEN_PASSWORD
       - name: Guess Dependency Declaration Version
         run: |
-          echo ${{github.ref_name}}
-          
-          ls -a
-          ll
-          
           cd .github
-          ll
+          javac ReadmeUpdater.java
+          java ReadmeUpdater ${{github.ref_name}}
