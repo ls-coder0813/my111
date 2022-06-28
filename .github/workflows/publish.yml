@@ -25,6 +25,7 @@ jobs:
       - name: Propose a PR to Update Readme
         uses: peter-evans/create-pull-request@v3
         with:
+          base: main
           author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: "chore: add license header(s)"
           title: "chore: update maven and gradle dependency declarations"
