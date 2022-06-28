@@ -22,6 +22,7 @@ jobs:
           cd .github
           javac ReadmeUpdater.java
           java ReadmeUpdater ${{github.ref_name}}
+          rm -f ReadmeUpdater.class
       - name: Propose a PR to Update Readme
         uses: peter-evans/create-pull-request@v3
         with:
