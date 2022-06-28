@@ -11,7 +11,7 @@ public class ReadmeUpdater {
     private static final String GRADLE_VERSION = "implementation 'com\\.featureprobe:server-sdk-java:.*'";
 
     public static void main(String[] args) throws IOException {
-        String releaseVersion = args[1];
+        String releaseVersion = args[0];
 
         String new_content = new String(Files.readAllBytes(README_PATH))
                 .replaceAll(MAVEN_VERSION, String.format("<version>%s</version>", releaseVersion))
