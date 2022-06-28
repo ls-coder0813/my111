@@ -22,3 +22,12 @@ jobs:
           cd .github
           javac ReadmeUpdater.java
           java ReadmeUpdater ${{github.ref_name}}
+      - name: Propose a PR to Update Readme
+        uses: peter-evans/create-pull-request@v3
+        with:
+          author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
+          commit-message: "chore: add license header(s)"
+          title: "chore: update maven and gradle dependency declarations"
+          body: Update version info in dependency declarations to `${{github.ref_name}}`.
+          branch: readme-dep-ver
+          
